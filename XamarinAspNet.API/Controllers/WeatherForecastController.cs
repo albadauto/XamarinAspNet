@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PrimeiroProjeto.API.Models;
 
 namespace XamarinAspNet.API.Controllers
 {
@@ -28,6 +29,18 @@ namespace XamarinAspNet.API.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        public ActionResult PrintTyped([FromBody] string type)
+        {
+            return Ok(new { type });
+        }
+
+        [HttpPost("/WeatherForecast/Teste")]
+        public ActionResult Teste([FromBody] Teste test)
+        {
+            return Ok($"Seu nome é {test.Name} e sua idade é {test.Age}");
         }
     }
 }

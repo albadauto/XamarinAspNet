@@ -9,17 +9,27 @@
         </Frame>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Temperatura em graus celsius" HorizontalTextAlignment="Center" FontSize="24"></Label>
         <ListView x:Name="listaItens">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
                             <Label Text="{Binding TemperatureC}" FontSize="16" TextColor="Black" HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding Summary}" FontSize="16" TextColor="Black" HorizontalTextAlignment="Center"/>
+
                         </StackLayout>
                     </ViewCell>
+                    
                 </DataTemplate>
+                
+                
             </ListView.ItemTemplate>
         </ListView>
+        <Entry Placeholder="Digite seu nome" x:Name="TXTName"></Entry>
+        <Entry Placeholder="Digite sua idade" x:Name="TXTIdade" Keyboard="Numeric"></Entry>
+        <Button Clicked="BTNSubmit_Clicked" x:Name="BTNSubmit" Text="Enviar"></Button>
+
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
                 <FormattedString>

@@ -30,6 +30,9 @@
         <Entry Placeholder="Digite sua idade" x:Name="TXTIdade" Keyboard="Numeric"></Entry>
         <Button Clicked="BTNSubmit_Clicked" x:Name="BTNSubmit" Text="Enviar"></Button>
 
+        <Entry Text="{Binding Name}" ></Entry>
+        <Label Text="{Binding Message}"></Label>
+        <Button Command="{Binding ExibeMensagem}" Text="Testar"></Button>
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
                 <FormattedString>

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinAspNet.Services;
+using XamarinAspNet.ViewModel;
 
 namespace XamarinAspNet
 {
@@ -15,6 +16,7 @@ namespace XamarinAspNet
         {
             InitializeComponent();
             GetAllWeatherForecastsAsync();
+            this.BindingContext = new TesteViewModel();
         }
 
         private async void GetAllWeatherForecastsAsync()
